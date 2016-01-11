@@ -9,7 +9,7 @@ nodejs能够稳定运行在生成环境，推荐使用pm2部署
 ### 使用方法
 - `git clone git@code.csdn.net:lutaf/autocomplete.git`
 -  node main.js
--  浏览器 访问  http://127.0.0.1:7000/
+-  浏览器 访问  http://127.0.0.1:8080/
 
 ### 数据格式
 data/eng.txt 有一份demo数据
@@ -21,7 +21,7 @@ data/eng.txt 有一份demo数据
 ```bash
 npm install pm2 -g
 pm2 start main.js -i 4
-``` 
+```
 
 # auto complete
 

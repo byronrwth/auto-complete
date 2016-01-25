@@ -7,9 +7,10 @@
   <script src="//code.jquery.com/jquery-1.9.1.js"></script>
   <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
   <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="the-basics.js"></script>
   <script>
   $(function() {
-    
+
     $( "#tags" ).autocomplete({
       source: function(request, cb){
           $.getJSON("/qs.b",{q:request.term,size:10},function(data){
@@ -17,15 +18,29 @@
           });
       }
     });
+
+    $("#Typeahead").typeahead({
+        name : 'sear',
+        remote: {
+            url : 'connection.php?query=%QUERY'
+        }
+    });
+
   });
   </script>
 </head>
 <body>
- 
+
 <div class="ui-widget" style="margin:50px auto;width:400px">
   <label for="tags">Tags: </label>
   <input id="tags">
 </div>
- 
+
+ <div id="the-basics" style="margin:50px auto;width:400px">
+   <label for="tags">Typeahead: </label>
+  <input id="tags">
+  <input class="typeahead" type="text" placeholder="States of USA">
+</div>
+
 </body>
 </html>

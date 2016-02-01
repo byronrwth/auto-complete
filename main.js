@@ -109,7 +109,7 @@ var kw = new KeywordList();
 kw.init("./data");
 
 var urls= [
-	['^/qs.b',function(req,res,param){
+	[   '^/testchengxi',function(req,res,param){ //'^/qs.b',function(req,res,param){
 		 var query = param.query;
 		 res.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
 		 

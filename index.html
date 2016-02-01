@@ -13,7 +13,8 @@
 
     $( "#tags" ).autocomplete({
       source: function(request, cb){
-          $.getJSON("/qs.b",{q:request.term,size:10},function(data){
+          //$.getJSON("/qs.b",{q:request.term,size:10},function(data){
+            $.getJSON("/testchengxi",{q:request.term,size:10},function(data){
                 cb(data ||[]);
           });
       }
